@@ -10,12 +10,6 @@
        <class name="Stepdef.Reaction_register_first_use_notice"/>
       <class name="Stepdef.Reaction_Login_first_use_notice"/>
       <class name= "Stepdef.Reaction_Transaction"/>
-      <class name="Stepdef.Cricketer_Register_First_Use_Notice"/>
-      <class name="Stepdef.Cricketer_login_first_use_notice"/>
-      <class name="Stepdef.Cricketer_Transaction"/>
-      <class name="Stepdef.Cornwall_Register"/>
-       <class name="Stepdef.Cornwall_Login_from_FUN"/>
-       <class name="Stepdef.Cornwall_Transaction"/>
        <class name="Stepdef.Maidenhead_Register"/>  
        <class name="Stepdef.Maidenhead_Login"/> 
        <class name="Stepdef.Maidenhead_transaction"/> 
@@ -25,8 +19,6 @@
        <class name="Stepdef.Windsor_Register"/>  
        <class name="Stepdef.windsor_Login"/> 
        <class name="Stepdef.Windsor_transaction"/>
-       <class name="Stepdef.Scifi_Register"/>
-       <class name="Stepdef.Scifi_Transaction"/> 
        <class name="Stepdef.newbury_Reg"/>
        <class name="Stepdef.Newbury_Transaction"/> 
        <class name="Stepdef.Grantham_Register"/>

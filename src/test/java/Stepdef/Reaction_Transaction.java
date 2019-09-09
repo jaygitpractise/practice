@@ -2,13 +2,16 @@ package Stepdef;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
+import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
-
-
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -63,7 +66,10 @@ public class Reaction_Transaction {
 			throw e0;
 		}
 	    System.out.println("Popbitch staging is ready to be tested");
-		
+		File scrFile = ((TakesScreenshot)driver_Reaction_Transaction).getScreenshotAs(OutputType.FILE);
+		String timestamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
+		FileUtils.copyFile(scrFile, new File("/Users/jay/Desktop/reaction/"+"_"+timestamp+"_"+"jpg" ));	
+	
 		//call first use notice elements of reaction
 				Thread.sleep(15000);
 				Reaction_first_use_notice Reac_first_use_register1 = new Reaction_first_use_notice(driver_Reaction_Transaction);	
@@ -71,7 +77,9 @@ public class Reaction_Transaction {
 				System.out.println("\n"+"Clicked on Create wallet.. Now lets see if this takes us to Sign up page"+"\n");	
 	
 		Thread.sleep(8000);
-		
+		File scrFile5 = ((TakesScreenshot)driver_Reaction_Transaction).getScreenshotAs(OutputType.FILE);
+		String timestamp5 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
+		FileUtils.copyFile(scrFile5, new File("/Users/jay/Desktop/reaction/"+"_"+timestamp5+"_"+"jpg" ));	
 		Thread.sleep(2000);
 		String Login_From_PopBitch_Frist_Use_Notice_Current_Url= driver_Reaction_Transaction.getCurrentUrl();
 	    System.out.println("\n"+"Clicking on login redirected to login page satging"+"\n");
@@ -83,7 +91,9 @@ public class Reaction_Transaction {
 		Thread.sleep(2000);
 		Login_Pop_First_Use.Login_Process("Ajjukanna1$$");
 		Thread.sleep(10000);
-		
+		File scrFile6 = ((TakesScreenshot)driver_Reaction_Transaction).getScreenshotAs(OutputType.FILE);
+		String timestamp6 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
+		FileUtils.copyFile(scrFile6, new File("/Users/jay/Desktop/reaction/"+"_"+timestamp6+"_"+"jpg" ));	
 		System.out.println("\n"+"Login successfull"+"\n");
 	}
 
@@ -157,6 +167,9 @@ public class Reaction_Transaction {
 					throw e0;
 				}
 			    System.out.println("Popbitch staging is ready to be tested");
+				File scrFile = ((TakesScreenshot)driver_Reaction_Transaction).getScreenshotAs(OutputType.FILE);
+				String timestamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
+				FileUtils.copyFile(scrFile, new File("/Users/jay/Desktop/reaction/"+"_"+timestamp+"_"+"jpg" ));	
 				
 				//click ok on authorise charge notice
 				
@@ -222,7 +235,10 @@ public class Reaction_Transaction {
 			pop_first_use_top_up_from_wallet2.click_on_green_tab();
 			
 			
-
+		//get screen shot of the wallet
+			File scrFile6 = ((TakesScreenshot)driver_Reaction_Transaction).getScreenshotAs(OutputType.FILE);
+			String timestamp6 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
+			FileUtils.copyFile(scrFile6, new File("/Users/jay/Desktop/reaction/"+"_"+timestamp6+"_"+"jpg" ));
 				
 		//get the balance after two transactions. since we topped up with £2 the balance should be 1.50
 			Thread.sleep(2000);
@@ -247,7 +263,7 @@ public class Reaction_Transaction {
 					expected_balance_global= balance_after;	
 					
 			
-		/*//GET FREE POINT AFTER THE TWO TRANSACTIONS
+		//GET FREE POINT AFTER THE TWO TRANSACTIONS
 			Thread.sleep(2000); 
 			String free_point_after_2_articles_string= wallet_elements_1.Free_point();
 			//int Popbitch_actual_free_point_after_2_articles = Integer.parseInt(free_point_after_2_articles_string);
@@ -269,7 +285,7 @@ public class Reaction_Transaction {
 				
 					}
 			
-			*/
+			
 	
 			
 		
@@ -283,7 +299,11 @@ public class Reaction_Transaction {
 			PopbitchFirstUseNoticeElements pop_first_use_top_up_from_wallet2 = new PopbitchFirstUseNoticeElements(driver_Reaction_Transaction);
 			pop_first_use_top_up_from_wallet2.click_on_green_tab();
 		
-		
+		//get screen shot of the wallet
+			File scrFile6 = ((TakesScreenshot)driver_Reaction_Transaction).getScreenshotAs(OutputType.FILE);
+			String timestamp6 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
+			FileUtils.copyFile(scrFile6, new File("/Users/jay/Desktop/reaction/"+"_"+timestamp6+"_"+"jpg" ));
+				
 		//get the balance after two transactions. since we topped up with £2 the balance should be 1.50
 			Thread.sleep(2000);
 			Popbitch_Wallet_Elements_staging wallet_elements_1 = new Popbitch_Wallet_Elements_staging(driver_Reaction_Transaction); 
@@ -307,7 +327,7 @@ public class Reaction_Transaction {
 					expected_balance_global= balance_after;	
 					
 			
-	/*	//GET FREE POINT AFTER THE TWO TRANSACTIONS
+		//GET FREE POINT AFTER THE TWO TRANSACTIONS
 			Thread.sleep(2000); 
 			String free_point_after_2_articles_string= wallet_elements_1.Free_point();
 			//int Popbitch_actual_free_point_after_2_articles = Integer.parseInt(free_point_after_2_articles_string);
@@ -332,7 +352,7 @@ public class Reaction_Transaction {
 			
 			System.out.println("\n"+"wallet balance on cricketer is "+balance_after+"\n");
 			//System.out.println("\n"+"free point on reaction is £1.20"+"\n");
-		*/
+		
 	}
 
 
@@ -344,7 +364,11 @@ public class Reaction_Transaction {
 			PopbitchFirstUseNoticeElements pop_first_use_top_up_from_wallet2 = new PopbitchFirstUseNoticeElements(driver_Reaction_Transaction);
 			pop_first_use_top_up_from_wallet2.click_on_green_tab();
 		
-		
+		//get screen shot of the wallet
+			File scrFile6 = ((TakesScreenshot)driver_Reaction_Transaction).getScreenshotAs(OutputType.FILE);
+			String timestamp6 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
+			FileUtils.copyFile(scrFile6, new File("/Users/jay/Desktop/reaction/"+"_"+timestamp6+"_"+"jpg" ));
+				
 		//get the balance after two transactions. since we topped up with £2 the balance should be 1.50
 			Thread.sleep(2000);
 			Popbitch_Wallet_Elements_staging wallet_elements_1 = new Popbitch_Wallet_Elements_staging(driver_Reaction_Transaction); 
@@ -368,7 +392,7 @@ public class Reaction_Transaction {
 					expected_balance_global= balance_after;	
 					
 			
-	/*	//GET FREE POINT AFTER THE TWO TRANSACTIONS
+		//GET FREE POINT AFTER THE TWO TRANSACTIONS
 			Thread.sleep(2000); 
 			String free_point_after_2_articles_string= wallet_elements_1.Free_point();
 			//int Popbitch_actual_free_point_after_2_articles = Integer.parseInt(free_point_after_2_articles_string);
@@ -388,7 +412,7 @@ public class Reaction_Transaction {
 						
 						System.out.println("Alert!!! Free point is not expected to be "+free_point_after_2_articles_string+ "please check, it should be " + Popbitch_expected_free_point_after_2_articles );
 				
-					}*/
+					}
 			
 	}
 	
