@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>TestNG:  Chrome</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Chrome</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Sep 06 10:14:57 BST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>459 seconds (459493 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Stepdef.Stamford_transaction.cornwall_wallet_balance_remains_and_is_uneffected_by_stamford()'><b>cornwall_wallet_balance_remains_and_is_uneffected_by_stamford</b><br>Test class: Stepdef.Stamford_transaction</td>
+<td></td>
+<td>14</td>
+<td>Stepdef.Stamford_transaction@2b2948e2</td></tr>
+<tr>
+<td title='Stepdef.Stamford_transaction.cricketer_wallet_balance_remains_and_is_uneffected_by_stamford()'><b>cricketer_wallet_balance_remains_and_is_uneffected_by_stamford</b><br>Test class: Stepdef.Stamford_transaction</td>
+<td></td>
+<td>14</td>
+<td>Stepdef.Stamford_transaction@2b2948e2</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Login.entering_the_correct_email_and_password_logs_me_in_to_stamford()'><b>entering_the_correct_email_and_password_logs_me_in_to_stamford</b><br>Test class: Stepdef.Stamford_Login</td>
+<td></td>
+<td>7</td>
+<td>Stepdef.Stamford_Login@eec5a4a</td></tr>
+<tr>
+<td title='Stepdef.Stamford_transaction.i_am_a_registered_Agate_User_and_I_login_in_to_stamford()'><b>i_am_a_registered_Agate_User_and_I_login_in_to_stamford</b><br>Test class: Stepdef.Stamford_transaction<br>Parameters: Chrome</td>
+<td></td>
+<td>82</td>
+<td>Stepdef.Stamford_transaction@2b2948e2</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Login.i_am_a_registered_user_of_stamford_and_I_open_a_browser()'><b>i_am_a_registered_user_of_stamford_and_I_open_a_browser</b><br>Test class: Stepdef.Stamford_Login<br>Parameters: Chrome</td>
+<td></td>
+<td>1</td>
+<td>Stepdef.Stamford_Login@eec5a4a</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Register.i_am_not_a_user_of_agate_on_stamford_and_I_open_a_browser()'><b>i_am_not_a_user_of_agate_on_stamford_and_I_open_a_browser</b><br>Test class: Stepdef.Stamford_Register<br>Parameters: Chrome</td>
+<td></td>
+<td>1</td>
+<td>Stepdef.Stamford_Register@210366b4</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Register.i_am_registered_as_an_agate_user_on_stamford_successfully_and_I_am_shown_a_first_use_notice()'><b>i_am_registered_as_an_agate_user_on_stamford_successfully_and_I_am_shown_a_first_use_notice</b><br>Test class: Stepdef.Stamford_Register</td>
+<td></td>
+<td>50</td>
+<td>Stepdef.Stamford_Register@210366b4</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Login.i_click_on_Login_from_stamford_First_use_notice()'><b>i_click_on_Login_from_stamford_First_use_notice</b><br>Test class: Stepdef.Stamford_Login</td>
+<td></td>
+<td>21</td>
+<td>Stepdef.Stamford_Login@eec5a4a</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Register.i_click_on_the_create_wallet_button_on_stamford()'><b>i_click_on_the_create_wallet_button_on_stamford</b><br>Test class: Stepdef.Stamford_Register</td>
+<td></td>
+<td>24</td>
+<td>Stepdef.Stamford_Register@210366b4</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Register.i_enter_all_the_details_successfully_on_reg_page_of_stamford()'><b>i_enter_all_the_details_successfully_on_reg_page_of_stamford</b><br>Test class: Stepdef.Stamford_Register</td>
+<td></td>
+<td>48</td>
+<td>Stepdef.Stamford_Register@210366b4</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Register.i_navigate_to_a_premium_article_on_stamford()'><b>i_navigate_to_a_premium_article_on_stamford</b><br>Test class: Stepdef.Stamford_Register</td>
+<td></td>
+<td>46</td>
+<td>Stepdef.Stamford_Register@210366b4</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Login.i_navigate_to_a_premium_article_on_stamford()'><b>i_navigate_to_a_premium_article_on_stamford</b><br>Test class: Stepdef.Stamford_Login</td>
+<td></td>
+<td>30</td>
+<td>Stepdef.Stamford_Login@eec5a4a</td></tr>
+<tr>
+<td title='Stepdef.Stamford_transaction.i_read_a_premium_article_on_stamford()'><b>i_read_a_premium_article_on_stamford</b><br>Test class: Stepdef.Stamford_transaction</td>
+<td></td>
+<td>14</td>
+<td>Stepdef.Stamford_transaction@2b2948e2</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Login.i_verify_that_the_Login_Button_Navigates_me_to_the_login_page_to_log_me_in_to_stamford()'><b>i_verify_that_the_Login_Button_Navigates_me_to_the_login_page_to_log_me_in_to_stamford</b><br>Test class: Stepdef.Stamford_Login</td>
+<td></td>
+<td>10</td>
+<td>Stepdef.Stamford_Login@eec5a4a</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Register.i_verify_that_the_create_wallet_button_takes_me_to_the_reg_page_on_stamford()'><b>i_verify_that_the_create_wallet_button_takes_me_to_the_reg_page_on_stamford</b><br>Test class: Stepdef.Stamford_Register</td>
+<td></td>
+<td>12</td>
+<td>Stepdef.Stamford_Register@210366b4</td></tr>
+<tr>
+<td title='Stepdef.Stamford_transaction.reaction_wallet_balance_is_updated_and_free_point_remains_uneffected_same_as_stamford()'><b>reaction_wallet_balance_is_updated_and_free_point_remains_uneffected_same_as_stamford</b><br>Test class: Stepdef.Stamford_transaction</td>
+<td></td>
+<td>14</td>
+<td>Stepdef.Stamford_transaction@2b2948e2</td></tr>
+<tr>
+<td title='Stepdef.Stamford_transaction.slough_wallet_balance_remains_and_is_uneffected_by_stamford()'><b>slough_wallet_balance_remains_and_is_uneffected_by_stamford</b><br>Test class: Stepdef.Stamford_transaction</td>
+<td></td>
+<td>15</td>
+<td>Stepdef.Stamford_transaction@2b2948e2</td></tr>
+<tr>
+<td title='Stepdef.Stamford_transaction.the_popbitch_wallet_balance_is_updated_same_as_stamford_and_free_point_remains_uneffected()'><b>the_popbitch_wallet_balance_is_updated_same_as_stamford_and_free_point_remains_uneffected</b><br>Test class: Stepdef.Stamford_transaction</td>
+<td></td>
+<td>13</td>
+<td>Stepdef.Stamford_transaction@2b2948e2</td></tr>
+<tr>
+<td title='Stepdef.Stamford_Login.verify_that_I_am_being_navigated_to_the_same_article_on_stamford()'><b>verify_that_I_am_being_navigated_to_the_same_article_on_stamford</b><br>Test class: Stepdef.Stamford_Login</td>
+<td></td>
+<td>17</td>
+<td>Stepdef.Stamford_Login@eec5a4a</td></tr>
+<tr>
+<td title='Stepdef.Stamford_transaction.windsor_wallet_balance_remains_and_is_uneffected_by_stamford()'><b>windsor_wallet_balance_remains_and_is_uneffected_by_stamford</b><br>Test class: Stepdef.Stamford_transaction</td>
+<td></td>
+<td>16</td>
+<td>Stepdef.Stamford_transaction@2b2948e2</td></tr>
+</table><p>
+</body>
+</html>
