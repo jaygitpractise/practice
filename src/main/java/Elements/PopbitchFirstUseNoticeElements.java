@@ -75,25 +75,25 @@ public class PopbitchFirstUseNoticeElements {
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 	
-	
 	public void Click_On_Popbitch_First_Use_Notice_Create_Wallet() throws InterruptedException {										//Register from popbitch First use Notice
+		Thread.sleep(2000);
+		//Scoll to the second half of Reg page
+				JavascriptExecutor js = (JavascriptExecutor)driver_PopbitchFirstUseNoticeElements;
+				js.executeScript("window.scrollBy(0,500)");
+				Thread.sleep(3000);	
 		
-		Thread.sleep(10000);
-		WebElement frame = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));				
+		WebElement frame = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));
+				
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame(frame);
-		Thread.sleep(4000);		
-		//driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta")).click();
+		Thread.sleep(4000);
 		
-		WebElement create_wallet = (new WebDriverWait(driver_PopbitchFirstUseNoticeElements, 20))
-				.until(ExpectedConditions.elementToBeClickable(By.id("btn_cta")));
-		
+		WebElement create_wallet=driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
 		create_wallet.click();
+		
+		
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 		
-
-	
-	
 	public void Click_On_Popbitch_First_Use_Notice_What_Is_Agate() {	
 		//What is Agate from popbitch First use Notice
 		driver_PopbitchFirstUseNoticeElements.findElement(First_Use_WhatIsAgate).click();

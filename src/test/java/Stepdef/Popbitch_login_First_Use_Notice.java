@@ -4,13 +4,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -55,21 +51,19 @@ public class Popbitch_login_First_Use_Notice {
 	@Test(priority=11)
 	public void i_navigate_to_popbitch_com() throws Throwable {
 		
-		driver_Login_From_PopBitch_Frist_Use_Notice.get("http://popbitch.agate.one/2017/10/iv-electile-dysfunction/");
+		driver_Login_From_PopBitch_Frist_Use_Notice.get("https://popbitch.com/2019/02/tat-for-tits/");
 		Thread.sleep(3000);
 		String popbitch_navigation= driver_Login_From_PopBitch_Frist_Use_Notice.getCurrentUrl();
 	    try
 		{
-	    	AssertJUnit.assertTrue(popbitch_navigation.contains("http://popbitch.agate.one/2017/10/iv-electile-dysfunction/"));
+	    	AssertJUnit.assertTrue(popbitch_navigation.contains("https://popbitch.com/2019/02/tat-for-tits/"));
 		}catch(AssertionError e0)
 		{
 			System.out.println("Browser did not open popbitch staging ");
 			throw e0;
 		}
 	    System.out.println("Popbitch staging is ready to be tested");
-		File scrFile = ((TakesScreenshot)driver_Login_From_PopBitch_Frist_Use_Notice).getScreenshotAs(OutputType.FILE);
-		String timestamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
-		FileUtils.copyFile(scrFile, new File("/Users/jay/Desktop/popbitch/"+"_"+timestamp+"_"+"jpg" ));	
+		
 	}
 	
 	@When("^I Click on Login to Agate from the Pop Bitch First use notice$")
@@ -86,13 +80,11 @@ public class Popbitch_login_First_Use_Notice {
 	@Test(priority=15)
 	public void i_verify_that_the_Login_Button_Navigates_me_to_the_login_page() throws Throwable {
 		Thread.sleep(8000);
-		File scrFile = ((TakesScreenshot)driver_Login_From_PopBitch_Frist_Use_Notice).getScreenshotAs(OutputType.FILE);
-		String timestamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
-		FileUtils.copyFile(scrFile, new File("/Users/jay/Desktop/popbitch/"+"_"+timestamp+"_"+"jpg" ));	
+		
 		Thread.sleep(2000);
 		String Login_From_PopBitch_Frist_Use_Notice_Current_Url= driver_Login_From_PopBitch_Frist_Use_Notice.getCurrentUrl();
 	    System.out.println("\n"+"Clicking on login redirected to login page satging"+"\n");
-	    assertTrue(Login_From_PopBitch_Frist_Use_Notice_Current_Url.contains("https://account-staging.agate.io/my-agate/sign-in?"));
+	    assertTrue(Login_From_PopBitch_Frist_Use_Notice_Current_Url.contains("https://account.agate.io/my-agate/sign-in?"));
 	    System.out.println("\n"+"Successfully navigated to login page"+"\n");
 	}
 	
@@ -104,9 +96,7 @@ public class Popbitch_login_First_Use_Notice {
 		Thread.sleep(2000);
 		Login_Pop_First_Use.Login_Process("Ajjukanna1$$");
 		Thread.sleep(2000);
-		File scrFile = ((TakesScreenshot)driver_Login_From_PopBitch_Frist_Use_Notice).getScreenshotAs(OutputType.FILE);
-		String timestamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
-		FileUtils.copyFile(scrFile, new File("/Users/jay/Desktop/popbitch/"+"_"+timestamp+"_"+"jpg" ));	
+		
 		System.out.println("\n"+"Login successfull"+"\n");
 	}
 	
@@ -126,7 +116,7 @@ public class Popbitch_login_First_Use_Notice {
 				
 			//convert string balances to double
 				double balance_after_first_article = Double.parseDouble(Balance_after_fist_Article);
-				double expected_balance_after_first_article = 0.75;
+				double expected_balance_after_first_article = 9.75;
 				
 			//verify whether the expected balance is the actual balance
 				AssertJUnit.assertEquals(expected_balance_after_first_article, balance_after_first_article);
@@ -141,11 +131,7 @@ public class Popbitch_login_First_Use_Notice {
 				}		
 		
 		
-	//String screenshot_name_2= "Popbitch_authorise_charge_notice_appears";
-		Thread.sleep(2000);
-		String timestamp_2 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
-		File scrFile_2 = ((TakesScreenshot)driver_Login_From_PopBitch_Frist_Use_Notice).getScreenshotAs(OutputType.FILE);		
-		FileUtils.copyFile(scrFile_2, new File("/Users/jay/Desktop/popbitch/"+"_"+timestamp_2+"_"+"jpg" ));
+	
 	
 	//click ok on authorise charge notice
 		Authorise_charge_notice_popbitch authy_popbitch = new Authorise_charge_notice_popbitch(driver_Login_From_PopBitch_Frist_Use_Notice);
@@ -175,29 +161,21 @@ public class Popbitch_login_First_Use_Notice {
 							System.out.println("Alert!! Balance is not expected to be deducted by "+actual_balance_being_deducted+ "please check, it should be  "+ expected_balance_to_be_deducted );
 						}		
 
-	//String screenshot_name_3= "Popbitch_full_article_appears";
-		String timestamp_3 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
-		File scrFile_3 = ((TakesScreenshot)driver_Login_From_PopBitch_Frist_Use_Notice).getScreenshotAs(OutputType.FILE);		
-		FileUtils.copyFile(scrFile_3, new File("/Users/jay/Desktop/popbitch/"+"_"+timestamp_3+"_"+"jpg" ));
-		Thread.sleep(3000);
+	
 		JavascriptExecutor js = (JavascriptExecutor)driver_Login_From_PopBitch_Frist_Use_Notice;
 		js.executeScript("window.scrollBy(0,500)");
 		
-	//String screenshot_name_4= "Popbitch_full_article_appears_2";
-		String timestamp_4 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
-		File scrFile_4 = ((TakesScreenshot)driver_Login_From_PopBitch_Frist_Use_Notice).getScreenshotAs(OutputType.FILE);		
-		FileUtils.copyFile(scrFile_4, new File("/Users/jay/Desktop/popbitch/"+"_"+timestamp_4+"_"+"jpg" ));		
+	
+		
 		Thread.sleep(3000);		
 		JavascriptExecutor js1 = (JavascriptExecutor)driver_Login_From_PopBitch_Frist_Use_Notice;
 		js1.executeScript("window.scrollBy(0,500)");		
-		String timestamp_5 = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
-		File scrFile_5 = ((TakesScreenshot)driver_Login_From_PopBitch_Frist_Use_Notice).getScreenshotAs(OutputType.FILE);		
-		FileUtils.copyFile(scrFile_5, new File("/Users/jay/Desktop/popbitch/"+"_"+timestamp_5+"_"+"jpg" ));
+		
 		Thread.sleep(1000);
 		
 	//Verify the user landed on the same article
 		String Login_From_PopBitch_Frist_Use_Notice_Current_Url1= driver_Login_From_PopBitch_Frist_Use_Notice.getCurrentUrl();	   
-	    String Login_From_PopBitch_Frist_Use_Notice_Popbitch_Login_Url1 = "http://popbitch.agate.one/2017/10/iv-electile-dysfunction/";
+	    String Login_From_PopBitch_Frist_Use_Notice_Popbitch_Login_Url1 = "https://popbitch.com/2019/02/tat-for-tits/";
 	    AssertJUnit.assertEquals(Login_From_PopBitch_Frist_Use_Notice_Current_Url1, Login_From_PopBitch_Frist_Use_Notice_Popbitch_Login_Url1);
 	    System.out.println("\n"+"User presented with complete article"+"\n");
 	    Thread.sleep(3000);
