@@ -2,11 +2,14 @@ package Elements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
 
 
 public class PopbitchFirstUseNoticeElements {
@@ -87,12 +90,18 @@ public class PopbitchFirstUseNoticeElements {
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame(frame);
 		Thread.sleep(20000);
 		
-		
-		
-		
-		WebElement create_wallet = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+		WebElement element=driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+
+		Point p= element.getLocation();
+
 		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
-		actions.moveToElement(create_wallet).click().perform();
+
+		actions.moveToElement(element).moveByOffset(p.x,p.y).click().perform();
+		
+		
+		/*WebElement create_wallet = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
+		actions.moveToElement(create_wallet).click().perform();*/
 		
 		
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
