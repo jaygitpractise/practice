@@ -55,10 +55,8 @@ public class Popbitch_register_First_Use_notice {
 			System.out.println("Browser did not open popbitch staging ");
 			throw e0;
 		}
-		System.out.println("Popbitch staging is ready to be tested oo lala ");
-		//Scroll by 200px
-		JavascriptExecutor js = (JavascriptExecutor)Driver_Register_From_Popbitch_Firstuse_Notice;
-		js.executeScript("window.scrollBy(0,500)");
+		
+		
 		Thread.sleep(3000);	
 	
 	}
@@ -82,10 +80,7 @@ public class Popbitch_register_First_Use_notice {
 		Thread.sleep(8000);
 		
 		
-		//Scoll to the second half of Reg page
-		JavascriptExecutor js = (JavascriptExecutor)Driver_Register_From_Popbitch_Firstuse_Notice;
-		js.executeScript("window.scrollBy(0,500)");
-		Thread.sleep(3000);		
+		
 		
 		//wait to check for url untill page has loaded
 		Register_Page_Elements Register_elements2 = new Register_Page_Elements(Driver_Register_From_Popbitch_Firstuse_Notice);
