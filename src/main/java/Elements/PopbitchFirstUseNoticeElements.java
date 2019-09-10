@@ -75,6 +75,9 @@ public class PopbitchFirstUseNoticeElements {
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 	
+	
+	
+	
 	public void Click_On_Popbitch_First_Use_Notice_Create_Wallet() throws InterruptedException {										//Register from popbitch First use Notice
 		Thread.sleep(20000);
 	
@@ -87,7 +90,7 @@ public class PopbitchFirstUseNoticeElements {
 		
 		
 		
-		WebElement create_wallet = driver_PopbitchFirstUseNoticeElements.findElement(First_Use_CreateWallet);
+		WebElement create_wallet = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
 		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
 		actions.moveToElement(create_wallet).click().perform();
 		
