@@ -23,7 +23,7 @@
           <inherited>true</inherited>
           <configuration>
           <suiteXmlFiles>
-          <suiteXmlFile>1Popbitch_chrome.xml</suiteXmlFile>
+          <suiteXmlFile>popbitch_safari.xml</suiteXmlFile>
           </suiteXmlFiles>
           </configuration>
         </plugin>
