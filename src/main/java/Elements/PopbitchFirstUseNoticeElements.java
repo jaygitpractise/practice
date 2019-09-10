@@ -76,19 +76,15 @@ public class PopbitchFirstUseNoticeElements {
 		}
 	
 	public void Click_On_Popbitch_First_Use_Notice_Create_Wallet() throws InterruptedException {										//Register from popbitch First use Notice
-		Thread.sleep(2000);
-		//Scoll to the second half of Reg page
-				JavascriptExecutor js = (JavascriptExecutor)driver_PopbitchFirstUseNoticeElements;
-				js.executeScript("window.scrollBy(0,500)");
-				Thread.sleep(3000);	
+		Thread.sleep(20000);
+	
 		
 		WebElement frame = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));
 				
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame(frame);
-		Thread.sleep(4000);
+		Thread.sleep(20000);
 		
-		//WebElement create_wallet=driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
-		//create_wallet.click();
+		
 		
 		
 		WebElement create_wallet = driver_PopbitchFirstUseNoticeElements.findElement(First_Use_CreateWallet);
