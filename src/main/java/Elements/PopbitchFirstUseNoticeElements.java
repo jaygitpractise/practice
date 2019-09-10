@@ -18,7 +18,7 @@ public class PopbitchFirstUseNoticeElements {
 	By Nav_To_First_Use_Stories= By.xpath("//*[@id=\"menu-item-35878\"]/a");								//stories
 	By Nav_To_First_Use_PremiumStory= By.xpath("//*[@id=\"post-37523\"]/div/div[2]/header/h2/a");	//first premium story
 	By First_use_Login=By.id("btn_login");							//login to agate
-	By First_Use_CreateWallet= By.xpath("/html/body/div/div/div/div/div/div/div[1]/button/span[3]");									//create wallet
+	By First_Use_CreateWallet= By.id("btn_cta");									//create wallet
 	By First_Use_WhatIsAgate= By.linkText("What is Agate?");												//what is Agate
 	
 	
@@ -87,8 +87,13 @@ public class PopbitchFirstUseNoticeElements {
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame(frame);
 		Thread.sleep(4000);
 		
-		WebElement create_wallet=driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
-		create_wallet.click();
+		//WebElement create_wallet=driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+		//create_wallet.click();
+		
+		
+		WebElement create_wallet = driver_PopbitchFirstUseNoticeElements.findElement(First_Use_CreateWallet);
+		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
+		actions.moveToElement(create_wallet).click().perform();
 		
 		
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
