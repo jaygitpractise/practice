@@ -60,7 +60,7 @@ public class Maidenhead_Register {
 			System.out.println("Browser did not open Maidenhead staging ");
 			throw e0;
 		}
-	    System.out.println("Maidenhead staging is ready to be tested");
+	    System.out.println("Maidenhead is ready to be tested");
 	}
 
 	@Given("I click on the create wallet button on maidenhead")

@@ -56,23 +56,19 @@ public class PopbitchFirstUseNoticeElements {
 	
 	
 	
-	
-	
+// Login in to wallet		
 	public void Click_On_Popbitch_First_Use_Notice_Login() throws InterruptedException {					//Login from popbitch First use Notice	
 		Thread.sleep(5000);
 		//Scoll to the second half of Reg page
 		JavascriptExecutor js = (JavascriptExecutor)driver_PopbitchFirstUseNoticeElements;
 		js.executeScript("window.scrollBy(0,700)");
 		Thread.sleep(3000);	
-		WebElement frame = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));
-		
+		WebElement frame = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));		
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame(frame);
 		Thread.sleep(4000);
 		Thread.sleep(4000);
 		WebElement Login = (new WebDriverWait(driver_PopbitchFirstUseNoticeElements, 20))
-				.until(ExpectedConditions.elementToBeClickable(By.id("btn_login")));
-		
-//WebElement Login=driver_PopbitchFirstUseNoticeElements.findElement(First_use_Login);
+				.until(ExpectedConditions.elementToBeClickable(By.id("btn_login")));		
 		Login.click();
 		
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
@@ -80,35 +76,18 @@ public class PopbitchFirstUseNoticeElements {
 	
 	
 	
-	
+// Creaate wallet 	
 	public void Click_On_Popbitch_First_Use_Notice_Create_Wallet() throws InterruptedException {										//Register from popbitch First use Notice
-		Thread.sleep(20000);
-	
-		
-		WebElement frame = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));
-				
-		driver_PopbitchFirstUseNoticeElements.switchTo().frame(frame);
-		Thread.sleep(20000);
-		
-		WebElement element=driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
-
-		Point p= element.getLocation();
-
-		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
-
-		actions.moveToElement(element).moveByOffset(p.x,p.y).click().perform();
-		
-		
-		/*WebElement create_wallet = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
-		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
-		actions.moveToElement(create_wallet).click().perform();*/
-		
-		
+		Thread.sleep(20000);				
+		driver_PopbitchFirstUseNoticeElements.switchTo().frame("iframe__inpage_notices");
+		Thread.sleep(20000);		
+		driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta")).click();		
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 		
+
+//what is agate 
 	public void Click_On_Popbitch_First_Use_Notice_What_Is_Agate() {	
-		//What is Agate from popbitch First use Notice
 		driver_PopbitchFirstUseNoticeElements.findElement(First_Use_WhatIsAgate).click();
 		}
 

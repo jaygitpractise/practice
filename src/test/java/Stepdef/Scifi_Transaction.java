@@ -348,7 +348,7 @@ public class Scifi_Transaction {
 					Thread.sleep(1000);
 				//convert string balances to double
 					double balance_after = Double.parseDouble(Balance_after_reading_an_article);
-					expected_balance = 9.80;
+					expected_balance = 9.75;
 				//verify whether the expected balance is the actual balance
 					AssertJUnit.assertEquals(expected_balance,balance_after);
 					if(balance_after==expected_balance)
@@ -413,7 +413,7 @@ public class Scifi_Transaction {
 					Thread.sleep(1000);
 				//convert string balances to double
 					double balance_after = Double.parseDouble(Balance_after_reading_an_article);
-					expected_balance = 9.80;
+					expected_balance = 9.75;
 				//verify whether the expected balance is the actual balance
 					AssertJUnit.assertEquals(expected_balance,balance_after);
 					if(balance_after==expected_balance)
@@ -478,7 +478,7 @@ public class Scifi_Transaction {
 					Thread.sleep(1000);
 				//convert string balances to double
 					double balance_after = Double.parseDouble(Balance_after_reading_an_article);
-					expected_balance = 9.80;
+					expected_balance = 9.75;
 				//verify whether the expected balance is the actual balance
 					AssertJUnit.assertEquals(expected_balance, balance_after);
 					if(balance_after==expected_balance)
