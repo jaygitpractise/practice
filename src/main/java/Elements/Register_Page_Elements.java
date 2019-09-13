@@ -9,6 +9,7 @@ import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -80,7 +81,8 @@ public class Register_Page_Elements {
 
 	
 	
-	public void Registration_Process() throws InterruptedException, IOException  {		//enter values to Register page elements and hit Register
+	public void Registration_Process() throws InterruptedException, IOException  {		
+		//enter values to Register page elements and hit Register
 		
 	
 		
@@ -88,9 +90,15 @@ public class Register_Page_Elements {
 		
 		Thread.sleep(10000);
 		
+		Dimension d = new Dimension(1382,744); 
+		//Resize the current window to the given dimension
+		driver_Register_Page_Elements.manage().window().setSize(d); 
+		
+		Thread.sleep(4000);
 		
 		
-		driver_Register_Page_Elements.findElement(Register_Page_email).sendKeys(randomEmail);
+		
+		driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(randomEmail);
 		Thread.sleep(1000);
 		driver_Register_Page_Elements.findElement(Register_Page_password).sendKeys("Ajjukanna1$$");
 		Thread.sleep(1000);
