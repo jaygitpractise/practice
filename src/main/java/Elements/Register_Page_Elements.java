@@ -15,6 +15,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
@@ -96,9 +98,10 @@ public class Register_Page_Elements {
 		
 		Thread.sleep(4000);
 		
-		
-		
-		driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(randomEmail);
+		WebElement Register_Page_email= driver_Register_Page_Elements.findElement(By.id("email"));
+		WebDriverWait wait = new WebDriverWait(driver_Register_Page_Elements,60);
+        wait.until(ExpectedConditions.visibilityOf(Register_Page_email));
+		//driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(randomEmail);
 		Thread.sleep(1000);
 		driver_Register_Page_Elements.findElement(Register_Page_password).sendKeys("Ajjukanna1$$");
 		Thread.sleep(1000);
