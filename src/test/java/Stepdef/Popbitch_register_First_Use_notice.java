@@ -104,7 +104,7 @@ public class Popbitch_register_First_Use_notice {
 	@When("^I enter the correct details and hit the Register button$")
 	@Test(priority=4) 
 	public void i_enter_the_correct_details_and_hit_the_Register_button() throws Throwable {
-		Thread.sleep(5000);
+		Thread.sleep(30000);
 		Register_Page_Elements Register_elements = new Register_Page_Elements(Driver_Register_From_Popbitch_Firstuse_Notice);
 	 	Register_elements.Registration_Process();
 	}
