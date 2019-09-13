@@ -4,27 +4,27 @@
   <test thread-count="5" name="Chrome(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="Stepdef.Stamford_Login">
+      <class name="Stepdef.Spalding_Login">
         <methods>
-          <include name="verify_that_I_am_being_navigated_to_the_same_article_on_stamford"/>
+          <include name="verify_that_I_am_being_navigated_to_the_same_article_on_spalding"/>
         </methods>
-      </class> <!-- Stepdef.Stamford_Login -->
-      <class name="Stepdef.Stamford_transaction">
+      </class> <!-- Stepdef.Spalding_Login -->
+      <class name="Stepdef.Spalding_transaction">
         <methods>
-          <include name="windsor_wallet_balance_remains_and_is_uneffected_by_stamford"/>
-          <include name="i_read_a_premium_article_on_stamford"/>
-          <include name="slough_wallet_balance_remains_and_is_uneffected_by_stamford"/>
-          <include name="the_popbitch_wallet_balance_is_updated_same_as_stamford_and_free_point_remains_uneffected"/>
-          <include name="cricketer_wallet_balance_remains_and_is_uneffected_by_stamford"/>
-          <include name="cornwall_wallet_balance_remains_and_is_uneffected_by_stamford"/>
-          <include name="reaction_wallet_balance_is_updated_and_free_point_remains_uneffected_same_as_stamford"/>
+          <include name="i_read_a_premium_article_on_spalding"/>
+          <include name="the_popbitch_wallet_balance_is_updated_same_as_spalding_and_free_point_remains_uneffected"/>
+          <include name="slough_wallet_balance_remains_and_is_uneffected_by_spalding"/>
+          <include name="cricketer_wallet_balance_remains_and_is_uneffected_by_spalding"/>
+          <include name="cornwall_wallet_balance_remains_and_is_uneffected_by_spalding"/>
+          <include name="reaction_wallet_balance_is_updated_and_free_point_remains_uneffected_same_as_spalding"/>
+          <include name="windsor_wallet_balance_remains_and_is_uneffected_by_spalding"/>
         </methods>
-      </class> <!-- Stepdef.Stamford_transaction -->
-      <class name="Stepdef.Stamford_Register">
+      </class> <!-- Stepdef.Spalding_transaction -->
+      <class name="Stepdef.Spalding_register">
         <methods>
-          <include name="i_am_registered_as_an_agate_user_on_stamford_successfully_and_I_am_shown_a_first_use_notice"/>
+          <include name="i_am_registered_as_an_agate_user_on_spalding_successfully_and_I_am_shown_a_first_use_notice"/>
         </methods>
-      </class> <!-- Stepdef.Stamford_Register -->
+      </class> <!-- Stepdef.Spalding_register -->
     </classes>
   </test> <!-- Chrome(failed) -->
 </suite> <!-- Failed suite [Chrome] -->

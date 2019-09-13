@@ -81,7 +81,14 @@ public class PopbitchFirstUseNoticeElements {
 		Thread.sleep(20000);				
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame("iframe__inpage_notices");
 		Thread.sleep(20000);		
-		driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta")).click();		
+			
+		By loadingImage = By.id("loading image ID");
+
+		
+
+	/*	wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingImage));
+		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+		driver_PopbitchFirstUseNoticeElements).execute_script("arguments[0].click();", element);*/
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 		

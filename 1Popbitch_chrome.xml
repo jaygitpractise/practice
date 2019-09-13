@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Popbitch Chrome">
-  <test  name="firefox" >
-   <parameter name="firefox" value="firefox" />
+  <test  name="chrome" >
+   <parameter name="chrome" value="chrome" />
     <classes>
       <class name="Stepdef.Popbitch_register_First_Use_notice"/>
       <class name="Stepdef.Popbitch_login_First_Use_Notice"/>
