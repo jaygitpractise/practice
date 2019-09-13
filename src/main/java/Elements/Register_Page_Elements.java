@@ -86,6 +86,8 @@ public class Register_Page_Elements {
 		
 		randomEmail = randomEmail();
 		
+		Thread.sleep(10000);
+		
 		
 		
 		driver_Register_Page_Elements.findElement(Register_Page_email).sendKeys(randomEmail);
