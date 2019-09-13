@@ -87,7 +87,7 @@ public class Register_Page_Elements {
 		
 		
 		
-		driver_Register_Page_Elements.findElement(Register_Page_email).sendKeys(randomEmail);
+		driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(randomEmail);
 		Thread.sleep(1000);
 		driver_Register_Page_Elements.findElement(Register_Page_password).sendKeys("Ajjukanna1$$");
 		Thread.sleep(1000);
