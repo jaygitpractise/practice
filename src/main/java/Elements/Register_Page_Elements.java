@@ -87,10 +87,8 @@ public class Register_Page_Elements {
 		randomEmail = randomEmail();
 		
 		
-		WebElement element = driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]"));
-		JavascriptExecutor executor = (JavascriptExecutor)driver_Register_Page_Elements;
-		executor.executeScript("arguments[0].sendKeys(randomEmail)", element);
-		//driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(randomEmail);
+		
+		driver_Register_Page_Elements.findElement(Register_Page_email).sendKeys(randomEmail);
 		Thread.sleep(1000);
 		driver_Register_Page_Elements.findElement(Register_Page_password).sendKeys("Ajjukanna1$$");
 		Thread.sleep(1000);
