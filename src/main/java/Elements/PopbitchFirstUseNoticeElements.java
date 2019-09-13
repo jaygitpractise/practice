@@ -1,6 +1,7 @@
 package Elements;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -78,11 +79,21 @@ public class PopbitchFirstUseNoticeElements {
 	
 // Creaate wallet 	
 	public void Click_On_Popbitch_First_Use_Notice_Create_Wallet() throws InterruptedException {										//Register from popbitch First use Notice
-		Thread.sleep(20000);				
+		Thread.sleep(20000);
+		
+		
+		
+		Dimension d = new Dimension(1382,744); 
+		//Resize the current window to the given dimension
+		
+		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); 
+		
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame("iframe__inpage_notices");
 		Thread.sleep(20000);		
 			
-		By loadingImage = By.id("loading image ID");
+	WebElement create_wallet= 	driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+	
+	create_wallet.click();	
 
 		
 
