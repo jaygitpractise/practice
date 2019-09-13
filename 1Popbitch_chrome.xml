@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Popbitch Chrome">
   <test  name="chrome" >
-   <parameter name="chrome" value="chrome" />
+   <parameter name="browser" value="chrome" />
     <classes>
       <class name="Stepdef.Popbitch_register_First_Use_notice"/>
       <class name="Stepdef.Popbitch_login_First_Use_Notice"/>
