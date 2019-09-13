@@ -94,10 +94,14 @@ public class PopbitchFirstUseNoticeElements {
 	//WebElement create_wallet= 	driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
 	
 //	create_wallet.click();	
+		
+		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
 
-	WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
-	JavascriptExecutor executor = (JavascriptExecutor)driver_PopbitchFirstUseNoticeElements;
-	executor.executeScript("arguments[0].click();", element);	
+		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
+
+		actions.moveToElement(element).click().perform();
+
+	
 
 	
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();

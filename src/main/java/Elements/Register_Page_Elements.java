@@ -30,7 +30,7 @@ public class Register_Page_Elements {
 
 	//login page elements finding
 	By green_tab= By.id("agateposter");																					
-	By Register_Page_email= By.id("email");																															//email text box
+	By Register_Page_email1= By.id("email");																															//email text box
 	By Register_Page_password= By.id("password");																													//password text box
 	By Register_Page_Confirm_Password= By.id("password_confirmation");																									//confirm password textbox
 	By Register_Page_topup_3= By.xpath("//*[@id=\"app\"]/div[2]/div/div/div/div[2]/div[2]/div/form/section[1]/div/div[2]/label[1]");
@@ -110,9 +110,8 @@ public class Register_Page_Elements {
 		
 		
 		
-		WebDriverWait wait = new WebDriverWait(driver_Register_Page_Elements,60);
-        wait.until(ExpectedConditions.visibilityOf(Register_Page_email));
-		//driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(randomEmail);
+		
+		driver_Register_Page_Elements.findElement(Register_Page_email1).sendKeys(randomEmail);
 		Thread.sleep(1000);
 		driver_Register_Page_Elements.findElement(Register_Page_password).sendKeys("Ajjukanna1$$");
 		Thread.sleep(1000);
