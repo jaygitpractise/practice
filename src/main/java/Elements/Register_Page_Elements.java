@@ -101,11 +101,11 @@ public class Register_Page_Elements {
 		System.out.println(current_Url);
 		
 		
-		WebElement Register_Page_email= driver_Register_Page_Elements.findElement(By.id("email"));
+		/*WebElement Register_Page_email= driver_Register_Page_Elements.findElement(By.id("email"));
 		
 		Boolean visiblitiy = Register_Page_email.isDisplayed();
 		
-		System.out.println(visiblitiy);
+		System.out.println(visiblitiy);*/
 		
 		
 		
