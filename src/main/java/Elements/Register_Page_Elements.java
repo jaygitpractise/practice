@@ -92,11 +92,14 @@ public class Register_Page_Elements {
 		
 		Thread.sleep(10000);
 		
-		Dimension d = new Dimension(1382,744); 
+		/*Dimension d = new Dimension(1382,744); 
 		//Resize the current window to the given dimension
 		driver_Register_Page_Elements.manage().window().setSize(d); 
 		
-		Thread.sleep(4000);
+		Thread.sleep(4000);*/
+		String current_Url= driver_Register_Page_Elements.getCurrentUrl();
+		System.out.println(current_Url);
+		
 		
 		WebElement Register_Page_email= driver_Register_Page_Elements.findElement(By.id("email"));
 		
