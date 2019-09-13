@@ -99,6 +99,14 @@ public class Register_Page_Elements {
 		Thread.sleep(4000);
 		
 		WebElement Register_Page_email= driver_Register_Page_Elements.findElement(By.id("email"));
+		
+		Boolean visiblitiy = Register_Page_email.isDisplayed();
+		
+		System.out.println(visiblitiy);
+		
+		
+		
+		
 		WebDriverWait wait = new WebDriverWait(driver_Register_Page_Elements,60);
         wait.until(ExpectedConditions.visibilityOf(Register_Page_email));
 		//driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(randomEmail);
