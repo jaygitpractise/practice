@@ -91,15 +91,15 @@ public class PopbitchFirstUseNoticeElements {
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame("iframe__inpage_notices");
 		Thread.sleep(20000);		
 			
-	WebElement create_wallet= 	driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+	//WebElement create_wallet= 	driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
 	
-	create_wallet.click();	
+//	create_wallet.click();	
 
-		
+	WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+	JavascriptExecutor executor = (JavascriptExecutor)driver_PopbitchFirstUseNoticeElements;
+	executor.executeScript("arguments[0].click();", element);	
 
-	/*	wait.until(ExpectedConditions.invisibilityOfElementLocated(loadingImage));
-		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
-		driver_PopbitchFirstUseNoticeElements).execute_script("arguments[0].click();", element);*/
+	
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 		
