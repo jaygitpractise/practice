@@ -9,6 +9,7 @@ import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -86,8 +87,10 @@ public class Register_Page_Elements {
 		randomEmail = randomEmail();
 		
 		
-		
-		driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(randomEmail);
+		WebElement element = driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]"));
+		JavascriptExecutor executor = (JavascriptExecutor)driver_Register_Page_Elements;
+		executor.executeScript("arguments[0].sendKeys(randomEmail)", element);
+		//driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(randomEmail);
 		Thread.sleep(1000);
 		driver_Register_Page_Elements.findElement(Register_Page_password).sendKeys("Ajjukanna1$$");
 		Thread.sleep(1000);
