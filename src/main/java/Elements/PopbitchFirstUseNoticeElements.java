@@ -88,9 +88,9 @@ public class PopbitchFirstUseNoticeElements {
 		
 		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); 
 		
-	
+	WebElement iframe__inpage_notices = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));
 		
-		driver_PopbitchFirstUseNoticeElements.switchTo().frame("iframe__inpage_notices");
+		driver_PopbitchFirstUseNoticeElements.switchTo().frame(iframe__inpage_notices);
 				
 			
 		String Current_page = driver_PopbitchFirstUseNoticeElements.getCurrentUrl();
@@ -101,19 +101,16 @@ public class PopbitchFirstUseNoticeElements {
 		
 		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
 		
-		JavascriptExecutor jse = (JavascriptExecutor)driver_PopbitchFirstUseNoticeElements;
+		
+	
 
-		jse.executeScript("arguments[0].scrollIntoView()", element); 
-
+		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
 		
 
-		WebDriverWait wait = new WebDriverWait(driver_PopbitchFirstUseNoticeElements, 50);
+		actions.moveToElement(element).click().perform();
+		
 
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(First_Use_CreateWallet));
-
-	
-
-	
+		
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 		
