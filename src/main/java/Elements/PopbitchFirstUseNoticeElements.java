@@ -105,9 +105,11 @@ public class PopbitchFirstUseNoticeElements {
 
 		jse.executeScript("arguments[0].scrollIntoView()", element); 
 
-		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
+		
 
-		actions.moveToElement(element).click().perform();
+		WebDriverWait wait = new WebDriverWait(driver_PopbitchFirstUseNoticeElements, 50);
+
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(First_Use_CreateWallet));
 
 	
 
