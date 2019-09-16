@@ -150,11 +150,7 @@ public class Spalding_register {
 			 Thread.sleep(4000);
 					
 			// driver_Register_from_spalding_first_use_notice.findElement(By.className("gdpr-modal-button gdpr-modal-button-continue gdpr-modal-nonmobile")).click();
-			    //Screen shot of finish notice
-					String timestamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(Calendar.getInstance().getTime());
-					File scrFile = ((TakesScreenshot)driver_Register_from_spalding_first_use_notice).getScreenshotAs(OutputType.FILE);		
-					FileUtils.copyFile(scrFile, new File("/Users/jay/Desktop/spalding/"+"_"+timestamp+"_"+"jpg" ));
-				
+			    
 				//Verify that the finish notice appears
 					Popbitch_Finish_Notice_elements pop_finish = new Popbitch_Finish_Notice_elements(driver_Register_from_spalding_first_use_notice);
 					Boolean finish_notice_pop = pop_finish.Verify_finish_notice_appears();

@@ -97,13 +97,15 @@ public class Register_Page_Elements {
 		driver_Register_Page_Elements.manage().window().setSize(d); 
 		
 		Thread.sleep(4000);*/
+		
+		
 		String current_Url= driver_Register_Page_Elements.getCurrentUrl();
 		System.out.println(current_Url);
 		
 		
-		/*WebElement Register_Page_email= driver_Register_Page_Elements.findElement(By.id("email"));
+	WebElement Register_Page_email= driver_Register_Page_Elements.findElement(By.id("email"));
 		
-		Boolean visiblitiy = Register_Page_email.isDisplayed();
+		/*Boolean visiblitiy = Register_Page_email.isDisplayed();
 		
 		System.out.println(visiblitiy);*/
 		
@@ -111,7 +113,7 @@ public class Register_Page_Elements {
 		
 		
 		
-		driver_Register_Page_Elements.findElement(Register_Page_email1).sendKeys(randomEmail);
+		Register_Page_email.sendKeys(randomEmail);
 		Thread.sleep(1000);
 		driver_Register_Page_Elements.findElement(Register_Page_password).sendKeys("Ajjukanna1$$");
 		Thread.sleep(1000);
