@@ -3,6 +3,7 @@ package Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -79,14 +80,15 @@ public class PopbitchFirstUseNoticeElements {
 // Create wallet 	
 		public void Click_On_Popbitch_First_Use_Notice_Create_Wallet() throws InterruptedException {										//Register from popbitch First use Notice		
 		Dimension d = new Dimension(1382,744); 
-		//Resize the current window to the given dimension
-		
+		//Resize the current window to the given dimension		
 		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); 		
 		WebElement iframe__inpage_notices = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));		
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame(iframe__inpage_notices);			
 		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
-		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
-		actions.moveToElement(element).click().perform();		
+		/*Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
+		actions.moveToElement(element).sendKeys(Keys.RETURN).perform();	*/
+		element.sendKeys(Keys.RETURN);
+		
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 		
