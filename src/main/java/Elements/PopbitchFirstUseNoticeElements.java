@@ -58,7 +58,7 @@ public class PopbitchFirstUseNoticeElements {
 	
 	
 // Login in to wallet		
-	public void Click_On_Popbitch_First_Use_Notice_Login() throws InterruptedException {					//Login from popbitch First use Notice	
+		public void Click_On_Popbitch_First_Use_Notice_Login() throws InterruptedException {					//Login from popbitch First use Notice	
 		Thread.sleep(5000);
 		//Scoll to the second half of Reg page
 		JavascriptExecutor js = (JavascriptExecutor)driver_PopbitchFirstUseNoticeElements;
@@ -70,47 +70,23 @@ public class PopbitchFirstUseNoticeElements {
 		Thread.sleep(4000);
 		WebElement Login = (new WebDriverWait(driver_PopbitchFirstUseNoticeElements, 20))
 				.until(ExpectedConditions.elementToBeClickable(By.id("btn_login")));		
-		Login.click();
-		
+		Login.click();		
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 	
 	
 	
-// Creaate wallet 	
-	public void Click_On_Popbitch_First_Use_Notice_Create_Wallet() throws InterruptedException {										//Register from popbitch First use Notice
-	
-		
-		
-		
+// Create wallet 	
+		public void Click_On_Popbitch_First_Use_Notice_Create_Wallet() throws InterruptedException {										//Register from popbitch First use Notice		
 		Dimension d = new Dimension(1382,744); 
 		//Resize the current window to the given dimension
 		
-		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); 
-		
-	WebElement iframe__inpage_notices = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));
-		
-		driver_PopbitchFirstUseNoticeElements.switchTo().frame(iframe__inpage_notices);
-				
-			
-		String Current_page = driver_PopbitchFirstUseNoticeElements.getCurrentUrl();
-		
-		System.out.println(Current_page);
-		
-		
-		
+		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); 		
+		WebElement iframe__inpage_notices = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));		
+		driver_PopbitchFirstUseNoticeElements.switchTo().frame(iframe__inpage_notices);			
 		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
-		
-		
-	
-
 		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
-		
-
-		actions.moveToElement(element).click().perform();
-		
-
-		
+		actions.moveToElement(element).click().perform();		
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 		
