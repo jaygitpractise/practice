@@ -116,7 +116,7 @@ public class Popbitch_register_First_Use_notice {
 	    Thread.sleep(5000); 
 	    String Register_Elements_Expected_url= "https://popbitch.com/2019/02/a-doggy-shag-tale/";
 	    String Register_Elements_Actual_Url= Driver_Register_From_Popbitch_Firstuse_Notice.getCurrentUrl();
-	    AssertJUnit.assertEquals(Register_Elements_Expected_url, Register_Elements_Actual_Url);
+	 AssertJUnit.assertEquals(Register_Elements_Expected_url, Register_Elements_Actual_Url);
 	    System.out.println("\n"+"details entered successfully"+"\n");
 	    System.out.println("\n"+"Successfully navigated to the article"+"\n");
 	    

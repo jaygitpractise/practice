@@ -83,17 +83,15 @@ public class PopbitchFirstUseNoticeElements {
 		
 		
 		
-		Dimension d = new Dimension(1382,744); 
+	/*	Dimension d = new Dimension(1382,744); 
 		//Resize the current window to the given dimension
 		
-		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); 
+		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); */
 		
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame("iframe__inpage_notices");
-		Thread.sleep(20000);		
+		Thread.sleep(30000);		
 			
-	//WebElement create_wallet= 	driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
-	
-//	create_wallet.click();	
+		
 		
 		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
 
