@@ -79,19 +79,23 @@ public class PopbitchFirstUseNoticeElements {
 	
 // Creaate wallet 	
 	public void Click_On_Popbitch_First_Use_Notice_Create_Wallet() throws InterruptedException {										//Register from popbitch First use Notice
-		Thread.sleep(20000);
+	
 		
 		
 		
-	/*	Dimension d = new Dimension(1382,744); 
+		Dimension d = new Dimension(1382,744); 
 		//Resize the current window to the given dimension
 		
-		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); */
+		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); 
+		
+		Thread.sleep(20000);
 		
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame("iframe__inpage_notices");
 		Thread.sleep(30000);		
 			
+		String Current_page = driver_PopbitchFirstUseNoticeElements.getPageSource();
 		
+		System.out.println(Current_page);
 		
 		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
 
