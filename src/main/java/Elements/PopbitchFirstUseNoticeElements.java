@@ -88,16 +88,22 @@ public class PopbitchFirstUseNoticeElements {
 		
 		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); 
 		
-		Thread.sleep(20000);
+	
 		
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame("iframe__inpage_notices");
-		Thread.sleep(30000);		
+				
 			
 		String Current_page = driver_PopbitchFirstUseNoticeElements.getCurrentUrl();
 		
 		System.out.println(Current_page);
 		
+		
+		
 		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+		
+		JavascriptExecutor jse = (JavascriptExecutor)driver_PopbitchFirstUseNoticeElements;
+
+		jse.executeScript("arguments[0].scrollIntoView()", element); 
 
 		Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
 
