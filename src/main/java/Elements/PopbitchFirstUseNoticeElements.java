@@ -93,7 +93,7 @@ public class PopbitchFirstUseNoticeElements {
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame("iframe__inpage_notices");
 		Thread.sleep(30000);		
 			
-		String Current_page = driver_PopbitchFirstUseNoticeElements.getPageSource();
+		String Current_page = driver_PopbitchFirstUseNoticeElements.getCurrentUrl();
 		
 		System.out.println(Current_page);
 		
