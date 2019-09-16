@@ -9,8 +9,7 @@ import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -956,7 +955,7 @@ Thread.sleep(1000);
 	public void wait_untill_page_has_loaded() throws InterruptedException									//Click Register from login page
 	{
 		Thread.sleep(12000);
-		WebElement email = driver_Register_Page_Elements.findElement(Register_Page_email);
+		WebElement email = driver_Register_Page_Elements.findElement(Register_Page_email1);
 		Boolean email_displayed = email.isDisplayed();
 		if(email_displayed==true)
 		{
