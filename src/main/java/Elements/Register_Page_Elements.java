@@ -89,9 +89,7 @@ public class Register_Page_Elements {
 		//Resize the current window to the given dimension		
 		driver_Register_Page_Elements.manage().window().setSize(d); 
 		
-		
-		
-		
+System.out.println("Hellow");		
 		randomEmail = randomEmail();
 		
 		
@@ -105,18 +103,13 @@ public class Register_Page_Elements {
 		String current_Url= driver_Register_Page_Elements.getCurrentUrl();
 		System.out.println(current_Url);
 		
-		
-	WebElement Register_Page_email= driver_Register_Page_Elements.findElement(By.id("email"));
+ driver_Register_Page_Elements.findElement(By.id("email")).sendKeys(randomEmail);
 		
 		/*Boolean visiblitiy = Register_Page_email.isDisplayed();
 		
 		System.out.println(visiblitiy);*/
 		
 		
-		
-		
-		
-		Register_Page_email.sendKeys(randomEmail);
 		Thread.sleep(1000);
 		driver_Register_Page_Elements.findElement(Register_Page_password).sendKeys("Ajjukanna1$$");
 		Thread.sleep(1000);
