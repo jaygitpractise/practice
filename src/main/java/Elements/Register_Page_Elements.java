@@ -109,7 +109,7 @@ System.out.println("Hellow");
 		
 		System.out.println(visiblitiy);*/
 		
-		
+ 		driver_Register_Page_Elements.findElement(Register_Page_password).click();
 		Thread.sleep(1000);
 		driver_Register_Page_Elements.findElement(Register_Page_password).sendKeys("Ajjukanna1$$");
 		Thread.sleep(1000);
