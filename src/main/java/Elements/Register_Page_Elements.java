@@ -9,7 +9,7 @@ import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -85,11 +85,15 @@ public class Register_Page_Elements {
 	public void Registration_Process() throws InterruptedException, IOException  {		
 		//enter values to Register page elements and hit Register
 		
-	
+		Dimension d = new Dimension(1382,744); 
+		//Resize the current window to the given dimension		
+		driver_Register_Page_Elements.manage().window().setSize(d); 
+		
+		
+		
 		
 		randomEmail = randomEmail();
 		
-		Thread.sleep(10000);
 		
 		/*Dimension d = new Dimension(1382,744); 
 		//Resize the current window to the given dimension
@@ -127,7 +131,7 @@ public class Register_Page_Elements {
 		Thread.sleep(1000);
 		
 		
-	String url= 	driver_Register_Page_Elements.getCurrentUrl();
+	String url= driver_Register_Page_Elements.getCurrentUrl();
 		
 	if(url.contains("reaction"))
 	{
@@ -224,25 +228,7 @@ Thread.sleep(1000);
 		driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div/div/div[2]/div[2]/div[1]/form/button[1]/div/span")).click();
 		Thread.sleep(3000);
 		driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div/div/div[2]/div[2]/div[1]/form/section[1]/div/div[2]/label[1]")).click();
-		Thread.sleep(1000);
-		
-	
-		
-		//driver_Register_Page_Elements.switchTo().frame("braintree-hosted-field-number");
-		
-		//driver_Register_Page_Elements.findElement(Register_Page_Card_Number).sendKeys("4111111111111111");
-		//Thread.sleep(400);
-		//driver_Register_Page_Elements.switchTo().defaultContent();
-		//driver_Register_Page_Elements.switchTo().frame("braintree-hosted-field-expirationDate");
-		//driver_Register_Page_Elements.findElement(Register_Page_Card_Expiry_Date).sendKeys("0319");
-		//Thread.sleep(400);
-		//driver_Register_Page_Elements.switchTo().defaultContent();
-		
-		
-		
-		
-		
-		
+		Thread.sleep(1000);		
 		
 	}	
 	
@@ -254,19 +240,7 @@ Thread.sleep(1000);
 Thread.sleep(1000);
 		
 		driver_Register_Page_Elements.findElement(Register_Page_Register_Button).click();
-		Thread.sleep(10000);
-		
-		
-		
-		//driver_Register_Page_Elements.findElement(Register_Page_topup_3).click();
-		//Thread.sleep(2000);
-		//driver_Register_Page_Elements.findElement(Register_Page_pay_by_card).click();
-		//System.out.println("\n"+"clciked on credit card"+"\n");
-		Thread.sleep(5000);
-		
-		
-		
-		
+		Thread.sleep(15000);		
 		driver_Register_Page_Elements.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div/div/div[2]/div[2]/div[1]/form/button[1]/div")).click();
 		Thread.sleep(2000);
 		driver_Register_Page_Elements.findElement(By.id("voucher_code")).sendKeys("JAY1234567");
