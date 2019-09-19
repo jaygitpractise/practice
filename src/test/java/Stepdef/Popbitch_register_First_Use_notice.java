@@ -37,7 +37,7 @@ public class Popbitch_register_First_Use_notice {
 		} 
 			else if (browser.equalsIgnoreCase("chrome")) { 
 				
-				System.setProperty("webdriver.chrome.driver","C:\\Users\\Agate-test\\Desktop\\New folder\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver","/Jenkins/chromedriver");
 				
 			Driver_Register_From_Popbitch_Firstuse_Notice= new ChromeDriver();
 		} 
