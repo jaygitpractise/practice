@@ -87,8 +87,10 @@ public class PopbitchFirstUseNoticeElements {
 		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
 		/*Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
 		actions.moveToElement(element).sendKeys(Keys.RETURN).perform();	*/
-		element.sendKeys(Keys.RETURN);
-		
+		element.click();
+		Thread.sleep(4000);
+		WebElement element1 = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+		element1.click();
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 		
