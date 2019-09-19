@@ -45,6 +45,7 @@ public class Popbitch_Wallet_Elements_staging {
 				driver_Popbitch_Wallet_Elements_staging.switchTo().defaultContent();
 				return current_Balance;
 				
+				
 	}
 	
 

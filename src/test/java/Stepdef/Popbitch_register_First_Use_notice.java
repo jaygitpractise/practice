@@ -36,6 +36,9 @@ public class Popbitch_register_First_Use_notice {
 			Driver_Register_From_Popbitch_Firstuse_Notice.manage().window().maximize();
 		} 
 			else if (browser.equalsIgnoreCase("chrome")) { 
+				
+				System.setProperty("webdriver.chrome.driver","C:\\Users\\Agate-test\\Desktop\\New folder");
+				
 			Driver_Register_From_Popbitch_Firstuse_Notice= new ChromeDriver();
 		} 
 	}
