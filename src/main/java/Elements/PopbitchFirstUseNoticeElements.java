@@ -84,13 +84,13 @@ public class PopbitchFirstUseNoticeElements {
 		driver_PopbitchFirstUseNoticeElements.manage().window().setSize(d); 		
 		WebElement iframe__inpage_notices = driver_PopbitchFirstUseNoticeElements.findElement(By.id("iframe__inpage_notices"));		
 		driver_PopbitchFirstUseNoticeElements.switchTo().frame(iframe__inpage_notices);			
-		WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+		//WebElement element = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
 		/*Actions actions = new Actions(driver_PopbitchFirstUseNoticeElements);
 		actions.moveToElement(element).sendKeys(Keys.RETURN).perform();	*/
-		element.click();
+		//element.click();
 		Thread.sleep(4000);
-		//WebElement element1 = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
-		//element1.click();
+		WebElement element1 = driver_PopbitchFirstUseNoticeElements.findElement(By.id("btn_cta"));
+		element1.click();
 		driver_PopbitchFirstUseNoticeElements.switchTo().defaultContent();
 		}
 		
