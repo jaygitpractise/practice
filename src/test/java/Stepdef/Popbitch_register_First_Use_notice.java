@@ -53,6 +53,7 @@ public class Popbitch_register_First_Use_notice {
 		try
 		{
 			AssertJUnit.assertTrue(popbitch_navigation.contains("https://popbitch.com/2019/02/a-doggy-shag-tale/"));
+			System.out.println("Popbitch live ready for tests");
 		}	catch(AssertionError e0)
 		{
 			System.out.println("Browser did not open popbitch staging ");
@@ -80,7 +81,7 @@ public class Popbitch_register_First_Use_notice {
 	@Test(priority=3)
 	public void i_verify_that_the_create_wallet_button_navigates_me_to_the_sign_up_page() throws Throwable {			
 		
-		Thread.sleep(20000);
+	
 		
 		System.out.println("\n"+"Navigating to reg page"+"\n");
 		
